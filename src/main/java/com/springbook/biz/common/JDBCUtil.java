@@ -12,7 +12,7 @@ public class JDBCUtil {
 	public static Connection getConnection() { //데이터베이스 연결
 		try { //DriverManager 클래스를 사용한 연결
 			Class.forName("org.h2.Driver");
-			return DriverManager.getConnection("jdbc:h2:rcp://localhost/~/test","sa","");
+			return DriverManager.getConnection("jdbc:h2:tcp://localhost/~/test","sa","");
 		}catch(Exception e){
 			e.printStackTrace();
 		}
